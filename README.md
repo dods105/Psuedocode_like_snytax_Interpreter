@@ -25,6 +25,18 @@ So that could mean that running an interepreted language on top
 of an interpreted language can be slow in runtime. So i opted for C++
 
 
+________________________________________________________
+### How i will be making this
+
+There are a total of 30 markdown files onto which I will explain what each function/methods and classes are for.
+
+__Lesson 1 - What is a Lexer__
+
+__Lesson 2 - The Lexe__
+
+__Lesson 3 - Parser and AST__
+
+
 
 
 
