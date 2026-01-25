@@ -9,11 +9,8 @@ In this project, i wll be making a BASIC programming language interpreter. Using
   PRINT(X)
 ```
 
-This will be a 15 day project of mine. Where in
-I will be also uploading 2 lessons for each day
-for each topic that i have learned. 
-So there will be a total of 30 lesson.
-The source will be uploaded once the project has been finished.
+This will be a 25 day project of mine. Where in I will be also uploading 1 to 2 lessons for each day for each topic that i have learned. 
+So there will be a total of 30 lesson. The full source code will be uploaded once the project has been finished.
 
 
 Why I chose C++?
