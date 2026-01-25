@@ -32,10 +32,11 @@ There are a total of 30 markdown files onto which I will explain what each funct
 
 __Lesson 1 - What is a Lexer__
 
-__Lesson 2 - The Lexe__
+__Lesson 2 - Building the Lexer__
 
 __Lesson 3 - Parser and AST__
 
+__Lesson 4 - Building the Interpreter__
 
 
 
