@@ -15,10 +15,11 @@ of an interpreted language can be slow in runtime. So i opted for C++
 Update:
 The interpreter currently has the following features:
   - Print Statements
-  - Variable assignments (only for numbers)
+  - Variable assignments (Strings and Double)
   - Arithmetic Operations
   - If-Else statements
   - While/For loops Statements
+  - Inputs (Strings and Double)
 
 
 This Interpreter is still work in progress
