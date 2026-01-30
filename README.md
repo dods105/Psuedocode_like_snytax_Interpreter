@@ -51,9 +51,9 @@ The interpreter currently has the following features:
   - If-Else statements
   - While/For loops Statements
   - Inputs (Strings and Double)
+  - Array Indexing
 
 
-This Interpreter is still work in progress
 
 
 
