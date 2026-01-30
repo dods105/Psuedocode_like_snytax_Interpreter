@@ -77,12 +77,15 @@ public:
     }
 
     Token number() {
-        std::string r;
-        while (isdigit(current)){
-            r += current;
+        std::string result;
+        bool dotUsed = false;
+
+        while (isdigit(current) || current == '.' && !dotUsed){
+            if(current == '.') {dotUsed = true;}
+            result += current;
             advance();
         }
-        return {TokenType::NUMBER, r};
+        return {TokenType::NUMBER, result};
     }
 
     Token string() {
@@ -95,6 +98,7 @@ public:
         advance();
         return {TokenType::STRING, r};
     }
+
     Token identifier() {
         std::string r;
         while (isalnum(current)) {

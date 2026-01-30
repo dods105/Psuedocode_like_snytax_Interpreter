@@ -3,12 +3,12 @@
 struct AST { virtual ~AST() = default; };
 
 struct NumberNode : AST {
-    double v;
-    NumberNode(double x):v(x){}
+    double value;
+    NumberNode(double x):value(x){}
 };
 struct StringNode : AST {
-    std::string v;
-    StringNode(std::string x): v(x) {}
+    std::string value;
+    StringNode(std::string x): value(x) {}
 };
 struct VarNode : AST {
     std::string n;
@@ -16,13 +16,14 @@ struct VarNode : AST {
 };
 struct AssignNode : AST {
     std::string n;
-    AST* v;
-    AssignNode(std::string a,AST*b):n(a),v(b){}
+    AST* value;
+    AssignNode(std::string a,AST*b):n(a),value(b){}
 };
 struct BinOpNode : AST {
-    AST*l;Token o;
+    AST*l;
+    Token op;
     AST*r;
-    BinOpNode(AST*a,Token b,AST*c):l(a),o(b),r(c){}
+    BinOpNode(AST*a,Token b,AST*c):l(a),op(b),r(c){}
 };
 struct PrintNode : AST {
     AST* e; PrintNode(AST*x) : e(x){}
@@ -32,21 +33,20 @@ struct BlockNode : AST {
     BlockNode(std::vector<AST*>x):s(x){}
 };
 struct IfNode : AST {
-    AST*c,*t,*e;
-    IfNode(AST*a,AST*b,AST*d=nullptr):c(a),t(b),e(d){}
+    AST *condition, *then, *else_;
+    IfNode(AST*a,AST*b,AST*d=nullptr):condition(a),then(b),else_(d){}
 };
 struct WhileNode : AST {
-    AST*c,*b;
-    WhileNode(AST*a,AST*d):c(a),b(d){}
+    AST*condition,*body;
+    WhileNode(AST*a,AST*d):condition(a),body(d){}
 };
 struct ForNode : AST {
-    std::string v;
+    std::string value;
     AST*start,*end,*body;
-    ForNode(std::string a,AST*b,AST*c,AST*d):v(a),start(b),end(c),body(d){}
+    ForNode(std::string a,AST*b,AST*c,AST*d):value(a),start(b),end(c),body(d){}
 };
 struct InputNode : AST{
     AST* text;
-
     InputNode(AST* str) : text(str) {}
 };
 

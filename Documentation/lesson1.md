@@ -10,7 +10,7 @@ Covered in this lesson:
 What you write, is what the computer sees. So if you write the below code, the computers also sees it. But it cant understand its meaning.
 
 ```cpp
-  LET X = 5
+  X = 5
   
   PRINT X + 2
 ```
@@ -45,9 +45,9 @@ text - what value?
 The lexer walks through the code one character at a time
 
 ```cpp
-  LET X = 5
-  
-  L → E → T → space → X → space → = → space → 5
+  X = 5
+
+  X → space → = → space → 5
 ```
 
 
@@ -68,17 +68,17 @@ Then it decides what token to make.
 Look at the words below:
 
 ```cpp
-  LET
-  
-  X
-  
+
+  X = "Hello, World"
+
   PRINT
+
 ```
 
 
 They all look the same. They are all composed of letters, right? So how do the computer know if it is an identifier or a keyword? Well, first we'll have to define our keywords?
 
-Example of keywords: _LET, END, PRINT, FOR_
+Example of keywords: _END, PRINT, FOR_
 
 After defining the keywords, the computer will do this:
 
@@ -104,22 +104,22 @@ _This is only a peek of what's in the next lesson. On where we start to build a 
 
 ```cpp
   class Lexer {
-  
+
   string source;
-  
+
   int pos;
-  
+
   };
 ```
 
- 
+
   __How does it know if it has reached the end of the source(code)?__
 
 ```cpp
   bool Lexer::isAtEnd(){
-  
-  &nbsp;   return pos >= source.size()
-  
+
+    return pos >= source.size()
+
   }
 ```
 
@@ -133,12 +133,12 @@ _This is only a peek of what's in the next lesson. On where we start to build a 
 
   __look for a character next to the current position__
 
-  
+
 ```cpp
   char peek(){
-  
+
   return source[pos+1]
-  
+
   };
 ```
 
@@ -146,15 +146,18 @@ _This is only a peek of what's in the next lesson. On where we start to build a 
 
 ```cpp
   char advance(){
-  
+
   pos++
-  
+
   };
 ```
 
   __How to ignore spaces?__
 
-  
+
 ```cpp
-  while (current == ' ') advance();
+
+  while (current == ' ')
+    advance();
+
 ```
