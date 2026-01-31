@@ -114,11 +114,6 @@ you can open your command line or shell or terminal and go to the dame directory
 
 
 ```
-=======
-  - Array Indexing
-
-
->>>>>>> f5256fd15dfb04e2f57efe58d5c6c9f3a8cd1990
 
 
 
